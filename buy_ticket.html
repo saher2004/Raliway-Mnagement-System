@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Ticket Booking Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'buy_tickets.css')}}">
+</head>
+<body background="static/buy_ticket.jpg">
+    <div class="container">
+        <h2>Train Ticket Booking</h2>
+        <form action="{{ url_for('buy_ticket')}}" method="POST">
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input  type="text" id="fullName" name="fullName" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your Number"required>
+            </div>
+            <div class="form-group">
+                <label for="t_name">Train Name</label>
+                <input type="text" id="t_name" name="t_name" placeholder="Enter name of the Train" required>
+            </div>
+            <div class="form-group">
+                <label for="Seating">Seating Preference</label>
+                <select id="Seating" name="Seating" required>
+                    <option value="">Select Seating Preference</option>
+                    <option value="A">AC Seating</option>
+                    <option value="B">AC Sleeper Seating</option>
+                    <option value="C">Non-AC Seating</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="seat_no">Enter Seat Number</label>
+                <input type="number" id="seat_no" name="seat_no" placeholder="1 - 20" required>
+            </div>
+            <div class="form-group">
+                <label for="departureDate">Departure Date</label>
+                <input type="text" id="departureDate" name="departureDate" placeholder="dd-mm-yyyy" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Book Ticket</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

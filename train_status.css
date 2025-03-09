@@ -1,0 +1,54 @@
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: larger;
+  height: 100vh;
+  margin: 50px; /* Remove default margin */
+  padding: 0;
+  background-image: url('my_ticket.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.header-container {
+  margin-top: 50px;
+  text-align: center; /* Center the header */
+  margin-bottom: 20px;
+  font-size: large;
+}
+
+.tablecontainer {
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+    min-height: 100vh;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 80%;
+    max-width: 800px;
+    background-color: #f4efef;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 15px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+  }
+  
+  th {
+    background-color: #2aee07;
+    font-weight: bold;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  tr:hover {
+    background-color: #e9e9e9;
+  }

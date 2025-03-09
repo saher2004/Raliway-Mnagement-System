@@ -1,0 +1,70 @@
+/* Style for the body to take full height and use Flexbox */
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: larger;
+    height: 100vh; /* Set the body height to 100vh */
+    background-color: #f9f3f3c6;
+    margin: 50px; /* Remove default margin */
+    padding: 0;
+    background-image: url('view_ticket.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+.header-container {
+    margin-top: 50px;
+    text-align: center; /* Center the header */
+    margin-bottom: 20px;
+    font-size: large;
+  }
+  
+
+/* Centering and Styling the table */
+.table {
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+    min-height: 100vh;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+table {
+    width: 100%; /* Make the table take up the full width */
+    border-collapse: collapse;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+
+}
+
+/* Table header styling */
+th, td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #2aee07;
+    color: white;
+    text-align: center;
+}
+
+/* Styling for alternate rows */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Hover effect on rows */
+tr:hover {
+    background-color: #ddd;
+}
+
+td {
+    font-size: 16px;
+}
+
+/* Responsive table for small screens */
+.table-container {
+    overflow-x: auto; /* Allows horizontal scrolling on small screens */
+    max-width: 100%; /* Makes sure the table doesn't exceed the viewport width */
+}

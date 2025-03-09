@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="static/home_style.css">
+</head>
+<body>
+    <header>
+        <div class="project-title">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Railway Management System Logo" style="height: 40px; margin-right: 10px;">
+            <h1 style="font-size: 20px; margin: 0;">Railway Management System</h1>
+        </div>
+        <ul><b>
+            <li><a href="{{ url_for('ad_train') }}">Train</a></li>
+            <li><a href="{{ url_for('ad_ticket') }}">Tickets</a></li>
+            <li><a href="{{url_for('train_status')}}">Train status</a></li>
+            <li><a href="{{ url_for('about') }}">About Us</a></li></b>
+        </ul>
+    </header>
+    <div class="body">
+        <div class="intro-container">
+            <div class="intro-content">
+                <h2>Welcome to Our Railway Management System</h2>
+                <p>Experience seamless and efficient railway travel with our comprehensive system. Book tickets, track train status, and more, all at your fingertips.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

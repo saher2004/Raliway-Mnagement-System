@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Tickets</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'my_ticket.css')}}">
+</head>
+<body>
+    <div class="header-container"><h1>Ticket Details</h1></div>
+    <div class="table">
+        <table>
+            <tr>
+                <th>Ticket ID</th>
+                <th>Name</th>
+                <th>Train Name</th>
+                <th>Booked Seat</th>
+                <th>Departure Date</th>
+                <th>Phone Number</th>
+                <th>Email</th>
+            </tr>
+            {% for ticket in tickets %}
+            <tr>
+                <td> {{ ticket.Ticket_id }} </td>
+                <td> {{ ticket.name }}</td>
+                <td> {{ ticket.train_name }}</td>
+                <td> {{ ticket.ticket_seat }}</td>
+                <td> {{ ticket.t_date }}</td>
+                <td> {{ ticket.Phone_number }}</td>
+                <td> {{ ticket.email }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>

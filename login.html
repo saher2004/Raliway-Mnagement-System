@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Railway Management System - Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body background="static/login_bg.jpeg">
+    <div class="login-container">
+        <header>
+            <h1>Railway Management System</h1>
+            <p>Welcome to our railway management platform</p>
+        </header>
+        <main>
+            <form id="login-form" method="POST" action="{{ url_for('login') }}">
+                <label for="login_type">Choose Login type</label>
+                <select id="login_type" name="login_type" required>
+                    <option value="">Select Login Preference</option>
+                    <option value="Admin Login">Login as Admin</option>
+                    <option value="User Login">Login as User</option>
+                </select>
+                <label for="username">Username</label>
+                <input type="text" name="username" placeholder="Enter your username" required>
+                <label for="password">Password</label>
+                <input type="password" name="password" placeholder="Enter your password" required>
+                <div class="button-container">
+                <button class="glow-on-hover" type="submit">Login</button>
+                </div>
+            </form>
+        </main>
+        <footer>
+            <p>Don't have an account? <a href="{{ url_for('sign_up') }}">Sign up</a></p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

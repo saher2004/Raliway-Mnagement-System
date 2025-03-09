@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Status</title>
+    <link rel="stylesheet" href="static/train_status.css">
+</head>
+<body>
+    <div class="header-container">
+        <h1>Train Booked Details</h1>
+    </div>
+    <div class="tablecontainer">
+        <table>
+            <tr>
+                <th>Train Id</th>
+                <th>Train Name</th>
+                <th>booked_seat</th>
+            </tr>
+            {% for train in trains %}
+            <tr>
+                <td>{{ train.train_id }}</td>
+                <td>{{ train.train_name }}</td>
+                <td>{{ train.booked_seat }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>

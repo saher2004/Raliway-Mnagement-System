@@ -1,0 +1,150 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #052802;
+    color: #fff;
+    width: 100%;
+    margin: auto;
+    padding: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 25px;
+}
+
+header ul {
+    list-style: none;
+}
+
+header ul li {
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+    margin-right: 75px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #F5F5DC;
+    text-transform: uppercase;
+}
+
+header ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #F5F5DC;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s ease;
+}
+
+header ul li:hover::after {
+    width: 100%;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ebebcc;
+    min-width: 100px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    border-radius: 5px;
+    width: 130px;
+}
+
+.dropdown-content li {
+    text-align: center;
+}
+
+.dropdown-content li a {
+    color: #08d608;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.dropdown-content li a:hover {
+    background-color: #ebebcc;
+    color: #058905;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-image: url('about1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.about-us {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+.vision-mission {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.team {
+    margin-bottom: 20px;
+}
+
+.team ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.team li {
+    margin: 20px;
+    width: calc(33.33% - 20px);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #052802;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    clear: both;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Train Details</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='train.css')}}">
+</head>
+<body>
+    <!-- Sticky container for heading -->
+    <div class="sticky-container">
+        <h1>Train Details</h1>
+    </div>
+
+    <div class="tablecontainer">
+        <table>
+            <tr>
+                <th>Train Id</th>
+                <th>Train Name</th>
+                <th>Departure Time</th>
+                <th>Arrival Time</th>
+                <th>From-TO</th>
+            </tr>
+            {% for train in trains %}
+            <tr>
+                <td>{{ train.train_id }}</td>
+                <td>{{ train.train_name }}</td>
+                <td>{{ train.departure_time }}</td>
+                <td>{{ train.arrival_time }}</td>
+                <td>{{ train.train_travel }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+    <!-- Add button positioned below the table -->
+    <div class="sticky-container">
+        <a href="#add-form" class="btn-add">Add</a>
+    </div>
+
+    <!-- The form itself, initially hidden -->
+    <div id="add-form" class="popup-form">
+        <div class="close-btn">
+            <a href="#">&#10006;</a> <!-- Close button (X) -->
+        </div>
+        <h3>Add New Train</h3>
+        <form action="{{ url_for('ad_train') }}" method="POST">
+            <label for="train_name">Train Name:</label>
+            <input type="text" name="train_name" required><br>
+
+            <label for="departure_time">Departure Time:</label>
+            <input type="text" name="departure_time" required><br>
+
+            <label for="arrival_time">Arrival Time:</label>
+            <input type="text" name="arrival_time" required><br>
+
+            <label for="train_travel">From-TO:</label>
+            <input type="text" name="train_travel" required><br>
+
+            <button type="submit">Add Train</button>
+        </form>
+    </div>
+
+    <div class="overlay"></div>
+</body>
+</html>

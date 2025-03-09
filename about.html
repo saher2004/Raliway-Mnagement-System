@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="static/about.css">
+</head>
+<body>
+    <header>
+            <ul>
+                <b>
+                    <li><a href="{{ url_for('train') }}">Train</a></li>
+                    <li class="dropdown">
+                        <a href="#">Tickets</a>
+                        <ul class="dropdown-content">
+                            <li><a href="{{ url_for('buy_ticket') }}">Book Ticket</a></li>
+                            <li><a href="{{ url_for('my_tickets') }}">View Tickets</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="{{url_for('train_status')}}">Train status</a></li>
+                    <li><a href="#">About Us</a></li>
+                </b>
+            </ul>
+    </header>
+    <main>
+        <section class="about-us">
+            <h1>About Us</h1>
+            <p>Welcome to Railway Management System, your one-stop solution for all your railway needs. Our mission is to provide a seamless and efficient experience for passengers to book tickets, view tickets, and access train information.</p>
+            <div class="vision-mission">
+                <h2>Our Vision</h2>
+                <p>Our vision is to revolutionize the railway industry by providing a cutting-edge technology platform that enables passengers to access railway services with ease and convenience.</p>
+                <h2>Our Mission</h2>
+                <p>Our mission is to provide a user-friendly platform that caters to the needs of passengers, making their journey smoother and more convenient.</p>
+            </div>
+            <div class="team">
+                <h2>Meet Our Team</h2>
+                <ul>
+                    <li>
+                        <h3>Aayaan Shaikh</h3>
+                        <p></p>
+                    </li>
+                    <li>
+                        <h3>Saher Shaikh</h3>
+                        <p></p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Railway Management System. All rights reserved.</p>
+    </footer>
+</body>
+</html>
